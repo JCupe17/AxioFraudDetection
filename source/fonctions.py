@@ -1,5 +1,5 @@
 import re
-import unidecode
+from unidecode import unidecode
 
 def format_column_name(name):
     """Format a string that will be used as a column name
