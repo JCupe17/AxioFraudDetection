@@ -1,26 +1,19 @@
-# Détection de fraude avec du Deep Learning
+# Fraud Detection using Neural Networks
 
 
 ## Description
 
-Dans ce projet, on va implémenter des méthodes de Deep Learning pour la détection de fraude. L'objective est d'avoir un algorithme facilement généralisable pour traiter des différentes sources des données. Pour ce faire, on a téléchargé un dataset venant du challenge Kaggle [Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud). L'historique des données est de deux jours du mois de septembre 2013.
+This project aims to show some algorithms for fraud detection using neural networks.
+Even if fraud detection mechanisms are subject-dependent, we use a deep learning approach to avoid any feature extraction.
 
-Les données ont été anonimisées pour des raisons des confidentialité et ses variables explicatives ont été déjà traitées par une transformation PCA. En plus, ces données sont très desiquilibrés car seulement 0.192% d'observations sont des operations frauduleuses (492/284807)
+To implement the algorithms, we used a free dataset from Kaggle: [Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud).
+This dataset is a history of credit card transactoins during two days in September 2013. The features are anonymized due to confidentiality and privacy reasons.
+There are 28 features that are the result of a PCA processing:
 
-Données - Description des variables explicatives :
-* **V[1-28]**, sont les composantes principales transformation PCA.
-* **amount**, c'est la quantité de la transaction
-* **time**, c'est le temps entre la première transaction dur dataset et l'observation en cours.
-* **Class**, indicatuer de fraude/non fraude étant 1 une opération frauduleuse.
+* **V[1-28]**, principal features from a PCA process.
+* **amount**, amount of imoney for this transaction.
+* **time**, number of seconds elapsed between each transaction (over two days).
+* **Class**, fraud or non-fraud.
 
-Dossier de développement de la détection de fraude et comparaison entre DeepLearning and MachineLearning
-
-## Objectifs
-
-- Implémenter un algorithme de Deep Learning qui soit facilement généralisable pour des nouvelles donées
-- Alimenter l'AxioLib
-
-## Réferences
-
-- A compléter...
+The dataset is a highly unbalanced dataset because there are only 492 frauds out of 284807 transactions (0.172% of all transactions).
 
